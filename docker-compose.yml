@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  bind9:
+    image: docker.io/internetsystemsconsortium/bind9:9.18
+    ports:
+      - "8053:53/udp"
+      - "8953:953/udp"
+    volumes:
+      - ./lib:/var/lib/bind:Z
+      - ./cache:/var/cache/bind:Z
+      - ./etc/bind/named.conf:/etc/bind/named.conf:Z
+      - ./log:/var/log/bind:Z
