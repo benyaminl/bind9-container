@@ -1,0 +1,28 @@
+; isikan dengan text ini 
+$TTL 1D
+
+@   	IN  	SOA 	ns.stts.edu. emprit.stts.edu. (
+                          	2    	; Serial
+                     	604800    	; Refresh
+                      	86400    	; Retry
+                    	2419200    	; Expire
+                     	604800 )  	; Negative Cache TTL
+
+; NS Set
+stts.edu. IN NS ns.stts.edu.
+;sib NS ns.stts.edu.
+;test NS ns.stts.edu.
+;test2 NS ns.stts.edu.
+
+; Mail server
+test A 192.168.122.211 
+test2 A 192.168.122.62
+ns A 192.168.122.1
+sib A 192.168.9.32
+mx.test A 192.168.122.211
+mx.test2 A 192.168.122.62
+
+
+; For MX 
+test MX 10 mx.test.stts.edu.
+test2 MX 10 mx.test2.stts.edu.
